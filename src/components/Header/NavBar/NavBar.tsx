@@ -11,7 +11,9 @@ export default function NavBar() {
       <ul className={styles.navLeft}>
         <li>
           <div className={styles.subscribe}>
+            <Link href="/surveyGuide">
             <SubscribeIcon/>
+            </Link>
           </div>
         </li>
         <li className={styles.menuContainer}>

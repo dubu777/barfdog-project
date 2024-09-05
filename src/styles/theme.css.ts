@@ -10,6 +10,7 @@ export const themeVars = createThemeContract({
     gray2: '',
     gray3: '',
     gray4: '',
+    gray5: '',
     danger: '',
   },
   fontSize: {
@@ -31,6 +32,7 @@ export const theme = createTheme(themeVars, {
     gray2: '#909090',
     gray3: '#ddd',
     gray4: '#EFEFEF',
+    gray5: '#f5f5f5',
     danger: '#ca1011',
   },
   fontSize: {

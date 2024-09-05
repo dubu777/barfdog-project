@@ -4,6 +4,7 @@ import "@/styles/global.css";
 import { theme } from "@/styles/theme.css";
 import { globalFont } from "@/fonts/fonts";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={globalFont.variable}>
       <Header/>
         {children}
+      <Footer/>
       </body>
     </html>
   );
