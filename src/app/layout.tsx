@@ -7,6 +7,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { layoutContainer, layoutWrapper } from "@/styles/common.css";
 
+
 export const metadata: Metadata = {
   title: "바프독 | BARFDOG",
   description:
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body className={globalFont.variable}>
         <Header />
         <div className={layoutContainer}>
-          <div className={layoutWrapper}>{children}</div>
+          <div className={layoutWrapper}>
+            {children}
+            </div>
         </div>
         <Footer />
       </body>

@@ -3,8 +3,11 @@ import { style } from "@vanilla-extract/css";
 
 
 export const SuscribeContainer = style({
-  padding: '0 1.25rem',
-
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: '100%',
+  padding: "5rem 0 9.375rem",
 });
 export const SuscribeTitle = style({
   fontSize: themeVars.fontSize.xxl,

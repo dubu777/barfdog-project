@@ -4,8 +4,6 @@ import GuideIcon from '/public/survey-guide.svg';
 
 export default function surveyGuidePage() {
   return (
-    // <div className={styles.surveyGuideContainer}>
-    //   <div className={styles.surveyGuideWrapper}>
         <div className={styles.surveyWrapper}>
           <div className={styles.surveyBox}>
             <div className={styles.imageBox}>
@@ -22,7 +20,5 @@ export default function surveyGuidePage() {
             </Link>
           </div>
         </div>
-    //   </div>
-    // </div>
   );
 }
