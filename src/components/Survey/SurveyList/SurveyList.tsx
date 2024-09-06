@@ -4,10 +4,10 @@ import { surveyListContainer } from "./SurveyList.css";
 import SurveyButton from "../SurveyButton/SurveyButton";
 
 interface SurveyListProps {
-  options: readonly { id: string; value: string | boolean; label: string; subText?: readonly string[]; }[];
+  options: readonly { id: string; value: string | boolean | number; label: string; subText?: readonly string[]; }[];
   name: string;
-  selectedValue: string | boolean;
-  onChange: (value: string | boolean) => void;
+  selectedValue: string | boolean | number | null;
+  onChange: (value: string | boolean | number) => void;
   type?: "row" | "col" | 'grid';
 }
 

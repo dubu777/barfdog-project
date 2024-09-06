@@ -3,7 +3,7 @@ import useSelection from "@/hooks/useSelection";
 import { initialSurveyValue } from "@/constants/survey";
 import { SurveyFormData } from "@/types/survey";
 
-export function useBirth() {
+export function useSurveyForm() {
   const { formData, handleChange } = useSelection<SurveyFormData>(initialSurveyValue);
 
   const [year, setYear] = useState("");

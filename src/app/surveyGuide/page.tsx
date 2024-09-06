@@ -1,10 +1,11 @@
+import Link from "next/link";
 import * as styles from "./surveyGuide.css";
 import GuideIcon from '/public/survey-guide.svg';
 
 export default function surveyGuidePage() {
   return (
-    <div className={styles.surveyGuideContainer}>
-      <div className={styles.surveyGuideWrapper}>
+    // <div className={styles.surveyGuideContainer}>
+    //   <div className={styles.surveyGuideWrapper}>
         <div className={styles.surveyWrapper}>
           <div className={styles.surveyBox}>
             <div className={styles.imageBox}>
@@ -16,10 +17,12 @@ export default function surveyGuidePage() {
             </div>
           </div>
           <div className={styles.guideButtonWrapper}>
+            <Link href='/survey'>
             <button className={styles.guideButton}>반려견 정보작성 시작하기</button>
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   );
 }

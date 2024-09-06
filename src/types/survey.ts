@@ -14,7 +14,7 @@ interface SurveyFormData {
   snackCountLevel: string;
   inedibleFood: string;
   inedibleFoodEtc: string;
-  recommendRecipeId: string | null;
+  recommendRecipeId: number | null;
   caution: string;
 }
 

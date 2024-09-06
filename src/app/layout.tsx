@@ -5,7 +5,7 @@ import { theme } from "@/styles/theme.css";
 import { globalFont } from "@/fonts/fonts";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-
+import { layoutContainer, layoutWrapper } from "@/styles/common.css";
 
 export const metadata: Metadata = {
   title: "바프독 | BARFDOG",
@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="ko" className={theme}>
       <body className={globalFont.variable}>
-      <Header/>
-        {children}
-      <Footer/>
+        <Header />
+        <div className={layoutContainer}>
+          <div className={layoutWrapper}>{children}</div>
+        </div>
+        <Footer />
       </body>
     </html>
   );

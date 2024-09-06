@@ -5,8 +5,8 @@ import {
   confirmButtonWrapper,
   errorMessageWrapper,
   fieldContainer,
-  layoutContainer,
   pageContainer,
+  surveyContainer,
 } from "./SurveyForm.css";
 import SurveyNavigationButtons from "@/components/Survey/SurveyNavigationButtons/SurveyNavigationButtons";
 import SurveyPagination from "@/components/Survey/SurveyPagnation/SurveyPagnation";
@@ -14,7 +14,7 @@ import Survey1BasicInfo from "@/components/Survey/SurveySection/Survey1BasicInfo
 import Survey2ActivityInfo from "@/components/Survey/SurveySection/Survey2ActivityInfo";
 import Survey3AdditionalInfo from "@/components/Survey/SurveySection/Survey3AdditionalInfo";
 import { sectionVariants } from "@/constants";
-import { useBirth } from "@/hooks/useBirth";
+import { useSurveyForm } from "@/hooks/useSurveyForm";
 import useModal from "@/hooks/useModal";
 import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 import { useValidation } from "@/hooks/useValidation";
@@ -22,7 +22,7 @@ import { useScrollToElement } from "@/utils/scrollToElement";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SurveyForm() {
-  const { year, month, handleBirthChange, formData, handleChange } = useBirth();
+  const { year, month, handleBirthChange, formData, handleChange } = useSurveyForm();
   const { currentSection, direction, nextSection, prevSection } =
     useSectionNavigation(3);
   const sectionTitles = ["기본정보 입력", "활동량 입력", "추가정보 입력"];
@@ -45,7 +45,7 @@ export default function SurveyForm() {
   };
 
   return (
-    <div className={layoutContainer} id="survey-top">
+    <div className={surveyContainer} id="survey-top">
       <SurveyPagination
         currentSection={currentSection}
         totalSections={3}
@@ -85,6 +85,7 @@ export default function SurveyForm() {
             </motion.div>
           </AnimatePresence>
           <SurveyNavigationButtons
+            formData={formData}
             currentSection={currentSection}
             nextSection={handleNextSection}
             prevSection={handlePrevSection}

@@ -392,32 +392,32 @@ const ADDITIONAL_INFO = {
     options: [
       {
         id: "recommendRecipeId-5",
-        value: "5",
+        value: 5,
         label: "소화 부담이 적어 생식에 빠른 적응",
       },
       {
         id: "recommendRecipeId-6",
-        value: "6",
+        value: 6,
         label: "튼튼한 성장을 위한 영양 보충",
       },
       {
         id: "recommendRecipeId-7",
-        value: "7",
+        value: 7,
         label: "축 처진 반려견을 위한 에너지 보충",
       },
       {
         id: "recommendRecipeId-8",
-        value: "8",
+        value: 8,
         label: "빛나는 피부와 모질 & 체중관리",
       },
-      { id: "recommendRecipeId-9", value: "9", label: "첫 생식에 빠른 적응" },
-      { id: "recommendRecipeId-10", value: "10", label: "성장기 활력을 위한" },
+      { id: "recommendRecipeId-9", value: 9, label: "첫 생식에 빠른 적응" },
+      { id: "recommendRecipeId-10", value: 10, label: "성장기 활력을 위한" },
       {
         id: "recommendRecipeId-11",
-        value: "11",
+        value: 11,
         label: "활동량이 많은 아이를 위한",
       },
-      { id: "recommendRecipeId-12", value: "12", label: "면역력 향상을 위한" },
+      { id: "recommendRecipeId-12", value: 12, label: "면역력 향상을 위한" },
     ],
   },
   caution: {

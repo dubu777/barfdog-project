@@ -4,10 +4,8 @@ import { recipe } from "@vanilla-extract/recipes";
 
 
 
-export const layoutContainer = style({
-  width: '100vw',
+export const surveyContainer = style({
   display: 'flex',
-  justifyContent: "center",
   alignItems: 'center',
   flexDirection: 'column',
 })
@@ -50,7 +48,6 @@ export const fieldContainer = style({
   alignItems: "center",
   justifyContent: "center",
   width: '100%',
-  minHeight: "100vh",
   overflowX: "hidden",
   paddingBottom: '5rem',
 })

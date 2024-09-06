@@ -39,6 +39,11 @@ const surveyInputWrapper = style({
   flexDirection: "column",
   alignItems: 'center',
 })
+const container = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: 'center',
+})
 
 const notification = style({
   fontSize: themeVars.fontSize.s,
@@ -49,6 +54,20 @@ const notification = style({
   marginTop: "1.875rem",
 })
 
+const layoutContainer = style({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+});
+
+const layoutWrapper = style({
+  width: '75rem',
+  maxWidth: '120rem',
+  display: "flex",
+  justifyContent: 'center',
+});
+
+
 
 export {
   flexColumn,
@@ -58,5 +77,8 @@ export {
   flexRowCenter,
   surveyTitle,
   surveyInputWrapper,
-  notification
+  notification,
+  container,
+  layoutContainer,
+  layoutWrapper,
 };

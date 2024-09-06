@@ -2,7 +2,7 @@ import { SurveyFormData } from "@/types/survey";
 import { useEffect, useState } from "react";
 
 interface UseToggleOptionsParams {
-  options: readonly { id: string; value: string | boolean; label: string; subText?: readonly string[]; }[];
+  options: readonly { id: string; value: string | boolean | number; label: string; subText?: readonly string[]; }[];
   initialOptionCount: number;
   fieldName: keyof SurveyFormData;
   formData: SurveyFormData[keyof SurveyFormData];
@@ -41,7 +41,7 @@ export default function useToggleOptions({
     }
   }, [formData, options]);
 
-  const handleFirstSelection = (value: string | boolean) => {
+  const handleFirstSelection = (value: string | boolean | number) => {
     handleChange(fieldName, value);
 
     if (value !== "NONE") {
@@ -52,7 +52,7 @@ export default function useToggleOptions({
     }
   };
 
-  const handleAdditionalSelection = (value: string | boolean) => {
+  const handleAdditionalSelection = (value: string | boolean | number) => {
     handleChange(fieldName, value);
 
     if (fieldName === 'caution') {

@@ -5,7 +5,6 @@ export const surveyGuideContainer = style({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  width: '100%',
 });
 
 export const surveyGuideWrapper = style({

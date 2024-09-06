@@ -104,6 +104,19 @@ export default function Survey3AdditionalInfo({
         </p>
       </div>
       <div className={surveyInputWrapper}>
+        <p className={surveyTitle}>{ADDITIONAL_INFO.recommendRecipeId.title}</p>
+        <SurveyList
+          options={ADDITIONAL_INFO.recommendRecipeId.options}
+          name={ADDITIONAL_INFO.recommendRecipeId.name}
+          selectedValue={formData.recommendRecipeId}
+          onChange={(value) =>
+            handleChange("recommendRecipeId", value as number)
+          }
+          type="col"
+        />
+      </div>
+
+      <div className={surveyInputWrapper}>
         <p className={surveyTitle}>{ADDITIONAL_INFO.caution.title}</p>
         <SurveyList
           options={cautionOptions}

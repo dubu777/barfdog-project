@@ -24,13 +24,13 @@ export default function SurveyPagination({
   };
 
   return (
-    <div className={paginationWrapper}>
+    <section className={paginationWrapper}>
       <div className={progressBar} style={{ width: `${progressPercentage}%`, transition: 'width 0.4s ease' }} />
       {sectionTitles.map((title, index) => (
         <div key={index} className={bulletContainer({ status: getBulletStatus(index + 1) })}>
           <span className={bulletText({status: getBulletStatus(index + 1)})}>{title}</span>
         </div>
       ))}
-    </div>
+    </section>
   );
 }

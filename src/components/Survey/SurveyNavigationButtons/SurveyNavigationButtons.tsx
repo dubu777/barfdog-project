@@ -1,11 +1,18 @@
 import Image from "next/image";
-import { nextButton, prevButton, surveyButtonWrapper } from "@/components/Survey/SurveyForm/SurveyForm.css";
+import {
+  nextButton,
+  prevButton,
+  surveyButtonWrapper,
+} from "@/components/Survey/SurveyForm/SurveyForm.css";
+import { useRouter } from "next/navigation";
+import { SurveyFormData } from "@/types/survey";
 
 interface SurveyNavigationButtonsProps {
   currentSection: number;
   nextSection: () => void;
   prevSection: () => void;
   maxSection: number;
+  formData: SurveyFormData;
 }
 
 export default function SurveyNavigationButtons({
@@ -13,7 +20,14 @@ export default function SurveyNavigationButtons({
   nextSection,
   prevSection,
   maxSection,
+  formData,
 }: SurveyNavigationButtonsProps) {
+  const router = useRouter();
+
+  const handleSubmit = () => {
+  router.push(`/survey/statistics/${4376}`)
+  }
+
   return (
     <div className={surveyButtonWrapper}>
       <button
@@ -41,7 +55,10 @@ export default function SurveyNavigationButtons({
           />
         </button>
       ) : (
-        <button className={nextButton} onClick={() => alert("설문을 제출합니다.")}>
+        <button
+          className={nextButton}
+          onClick={handleSubmit}
+        >
           제출하기
           <Image
             src="/survey_right_arrow.png"
@@ -50,6 +67,7 @@ export default function SurveyNavigationButtons({
             height={12}
           />
         </button>
+
       )}
     </div>
   );

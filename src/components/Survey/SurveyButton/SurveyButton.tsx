@@ -5,11 +5,11 @@ import { buttonStyle, hiddenInputStyle, subTextStyle, surveyButtonContainer } fr
 interface SurveyButtonProps {
   id: string;
   name: string;
-  value: string | boolean;
+  value: string | boolean | number;
   isChecked: boolean;
   label: string;
   subText?: readonly string[];
-  onChange: (value: string | boolean) => void;
+  onChange: (value: string | boolean | number) => void;
 }
 
 export default function SurveyButton({
