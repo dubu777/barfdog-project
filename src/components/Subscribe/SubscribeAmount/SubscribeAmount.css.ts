@@ -14,6 +14,13 @@ export const SubscribeAmountTitle = style({
   paddingBottom: "3.75rem",
   textAlign: "center",
   gap: '0.5625rem',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      fontSize: "1.125rem",
+      paddingBottom: "1.875rem",
+      fontWeight: 600,
+    },
+  },
 });
 export const SubscribeAmountsubtitle = style({
   fontSize: "1rem",
@@ -27,6 +34,13 @@ export const SubscribePlanBox = style({
   justifyContent: "center",
   maxWidth: "62.5rem",
   margin: "0 auto",
+  '@media': {
+    'screen and (max-width: 940px)': {
+      gridTemplateColumns: "1fr",
+      maxWidth: "28.125rem",
+      gap: '1.25rem',
+    },
+  },
 });
 
 export const SuscribeRightTitleWrapper = style({

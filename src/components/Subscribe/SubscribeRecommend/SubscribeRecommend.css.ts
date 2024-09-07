@@ -8,6 +8,11 @@ export const SuscribeContainer = style({
   alignItems: 'center',
   width: '100%',
   padding: "5rem 0 9.375rem",
+  '@media': {
+    'screen and (max-width: 500px)': {
+      paddingTop: "5rem",
+    },
+  },
 });
 export const SuscribeTitle = style({
   fontSize: themeVars.fontSize.xxl,
@@ -17,6 +22,12 @@ export const SuscribeTitle = style({
   lineHeight: "1.4",
   paddingBottom: "3.125rem",
   fontWeight: '700',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      fontSize: '1.5rem',
+      paddingBottom: "1.325rem",
+    },
+  },
 });
 export const SuscribeResultWrapper = style({
   display: "flex",
@@ -33,6 +44,19 @@ export const SuscribeResultBox = style({
   `,
   justifyContent: 'space-between',
   columnGap: '2.5rem',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      columnGap: '0',
+      display: 'grid',
+      gridTemplateAreas: `
+        "result_title"
+        "grid_left"
+        "grid_right"
+      `,
+      gridTemplateColumns: '1fr',
+      rowGap: '1.875rem',
+    },
+  },
 });
 
 export const SuscribeResultLeft = style({
@@ -42,6 +66,13 @@ export const SuscribeResultLeft = style({
   alignItems: 'center',
   boxShadow: '0 0 1.5625rem rgba(0, 0, 0, 0.15)',
   paddingBottom: '0.925rem',
+  gridArea: 'grid_left',
+  '@media': {
+    'screen and (max-width: 500px)': {
+      gridRow: '2 / span 1',
+      margin: '0 auto',
+    },
+  },
 });
 
 export const SuscribeRightTitleWrapper = style({
@@ -53,7 +84,17 @@ export const SuscribeRightTitleWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'flex-start',
-  // justifyContent: 'center',
+  gridArea: 'result_title',
+  '@media': {
+    'screen and (max-width: 800px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '0.125rem',
+    },
+    'screen and (max-width: 500px)': {
+      fontSize: '1.25rem',
+    },
+  },
 });
 
 
@@ -140,8 +181,6 @@ export const resultTextOneWrapper = style({
 
 
 
-
-
 export const SuscribeRightContenteWrapper = style({
   display: 'grid',
   gridTemplateColumns: '7fr 3fr',
@@ -151,6 +190,7 @@ export const SuscribeRightContenteWrapper = style({
   rowGap: '.5rem',
   columnGap: '1.25rem',
   padding: '1rem 0',
+  gridArea: 'grid_right',
 });
 export const SuscribeResultImgBox = style({
   width: '16.25rem',
@@ -184,6 +224,11 @@ export const SuscribeAmountText = style({
   color: themeVars.colors.danger,
   fontWeight: 600,
   paddingBottom: '0.125rem',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      fontSize: "1.25rem",
+    },
+  },
 });
 
 

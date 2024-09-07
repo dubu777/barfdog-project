@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as styles from "./SubscribeAmount.css";
 import { Plan, plansData } from "@/constants/planData";
+import PlanBox from "@/components/PlanSelectBox/PlanSelectBox";
 import { calculatePrices } from "@/utils/calculatePrices";
-import PlanBox from "@/components/PlanBox/PlanBox";
 
-export default function SubscribeAmount() {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+interface SubscribeAmountProps {
+  selectedRecipe: string | null;
+  handlePlanSelect: (id: string) => void;
+  selectedPlan: string | null;
+}
 
-  const handlePlanSelect = (id: string) => {
-    setSelectedPlan(id);
-  };
+export default function SubscribeAmount({ selectedRecipe,handlePlanSelect, selectedPlan}: SubscribeAmountProps) {
+
 
   return (
     <section className={styles.SubscribeAmountContainer}>
@@ -26,7 +28,7 @@ export default function SubscribeAmount() {
             {...plan}
             isSelected={selectedPlan === plan.id}
             onSelect={handlePlanSelect}
-            option="beef"
+            option={selectedRecipe}
           />
         ))}
       </div>

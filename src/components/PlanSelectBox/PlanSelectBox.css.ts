@@ -9,8 +9,9 @@ export const subscribePlansContainer = recipe({
     cursor: 'pointer',
     display: 'block',
     borderRadius: '.75rem',
-    border: `.0625rem solid ${themeVars.colors.gray5}`,
+    border: `.0625rem solid ${themeVars.colors.white}`,
     padding: '.9375rem 1.5625rem',
+    boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);',
     transition: 'border-color .15s ease, box-shadow .15s ease',
     ':hover': {
       boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',

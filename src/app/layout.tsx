@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
 import "@/styles/reset.css";
 import "@/styles/global.css";
+import { notoSansKr } from '@/fonts/fonts';
+import type { Metadata } from "next";
 import { theme } from "@/styles/theme.css";
-import { globalFont } from "@/fonts/fonts";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { layoutContainer, layoutWrapper } from "@/styles/common.css";
-
 
 export const metadata: Metadata = {
   title: "바프독 | BARFDOG",
@@ -22,13 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={theme}>
-      <body className={globalFont.variable}>
+      <body className={notoSansKr.className}>
         <Header />
-        <div className={layoutContainer}>
-          <div className={layoutWrapper}>
             {children}
-            </div>
-        </div>
         <Footer />
       </body>
     </html>

@@ -1,16 +1,6 @@
 import { style } from "@vanilla-extract/css";
 import { themeVars } from "@/styles/theme.css";
 
-export const surveyGuideContainer = style({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-});
-
-export const surveyGuideWrapper = style({
-  width: '75rem',
-  maxWidth: '120rem',
-});
 
 export const surveyWrapper = style({
   display: "flex",
@@ -28,6 +18,11 @@ export const surveyBox = style({
   height: '17.25rem',
   width: '35rem',
   backgroundColor: themeVars.colors.gray5,
+  "@media": {
+    "screen and (max-width: 600px)": {
+      width: '90dvw',
+    },
+  },
 });
 export const imageBox = style({
   width: '9.375rem',

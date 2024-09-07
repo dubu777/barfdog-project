@@ -5,6 +5,11 @@ import { themeVars } from "@/styles/theme.css";
 export const userContainer = style({
   width: '100%',
   padding: '.625rem 1.375rem .625rem 0',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      display: 'none',
+    },
+  },
 });
 
 export const userWrapper = style({

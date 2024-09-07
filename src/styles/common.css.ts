@@ -65,11 +65,26 @@ const layoutWrapper = style({
   maxWidth: '120rem',
   display: "flex",
   justifyContent: 'center',
+  '@media': {
+    'screen and (max-width: 75rem)': {
+      width: '100%',
+    },
+  },
+});
+const mainLayoutWrapper = style({
+  width: '100dvw',
+  justifyContent: 'center',
+  '@media': {
+    'screen and (max-width: 75rem)': {
+      width: '100%',
+    },
+  },
 });
 
 
 
 export {
+  mainLayoutWrapper,
   flexColumn,
   flexColumnAllCenter,
   flexRowAllCenter,

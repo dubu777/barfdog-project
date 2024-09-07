@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./PlanBox.css";
+import * as styles from "./PlanSelectBox.css";
 import { calculatePrices } from "@/utils/calculatePrices";
 
 interface PlanBoxProps {
@@ -13,7 +13,7 @@ interface PlanBoxProps {
   packs: number;
   discount: string;
   isSelected: boolean;
-  option: string;
+  option: string | null; 
   onSelect: (id: string) => void;
 }
 
@@ -31,8 +31,8 @@ export default function PlanBox({
   onSelect,
   option,
 }: PlanBoxProps) {
-  const { totalPrice, finalPrice, pricePerPack, gramsPerPack } =
-    calculatePrices(id, option);
+  const { totalPrice, finalPrice, pricePerPack, gramsPerPack } = calculatePrices(id, option)
+console.log(totalPrice);
 
   return (
     <label
@@ -68,7 +68,7 @@ export default function PlanBox({
                 {gramsPerPack}(1팩기준)
               </div>
               <div className={styles.planContentBox}>
-                {packs}팩 x {finalPrice}
+                {packs}팩 x {pricePerPack}
               </div>
             </li>
           </div>
@@ -86,10 +86,9 @@ export default function PlanBox({
         type="radio"
         name="plan"
         value={id}
-        checked={isSelected}
         className={styles.planInput}
       />
-      <span className={styles.selectButton({ isSelected })}>플랜 선택</span>
+      <span className={styles.selectButton({ isSelected })}>{isSelected ? "선택됨" : "플랜 선택"}</span>
     </label>
   );
 }
