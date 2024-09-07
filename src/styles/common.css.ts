@@ -59,6 +59,12 @@ const layoutContainer = style({
   justifyContent: "center",
   alignItems: "center",
 });
+export const layoutContainerr = style({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: '#F9F2EC'
+});
 
 const layoutWrapper = style({
   width: '75rem',
@@ -78,15 +84,9 @@ const mainLayoutWrapper = style({
     },
   },
 });
-const wrapper = style({
-  padding: '0',
-  position: 'relative',
-});
-
 
 
 export {
-  wrapper,
   mainLayoutWrapper,
   flexColumn,
   flexColumnAllCenter,

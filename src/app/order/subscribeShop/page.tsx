@@ -19,7 +19,8 @@ export default function SubscribePage({ params }: Props) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const surveyReportsId = searchParams.get("surveyReportsId");
-
+  const id = '4407';
+  
   const {
     selectedRecipe,
     selectedPlan,
@@ -43,7 +44,7 @@ export default function SubscribePage({ params }: Props) {
         <button className={styles.prevButton} onClick={handleBack}>
           뒤로가기
         </button>
-        <Link href="/order/deliveryInfo" passHref>
+        <Link href={`/order/ordersheet/subscribe/${id}`} passHref>
           <button className={styles.nextButton}>맞춤레시피 구매하기</button>
         </Link>
       </section>

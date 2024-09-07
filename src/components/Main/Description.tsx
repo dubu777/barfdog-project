@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import * as styles from './Description.css'; // Import vanilla-extract styles
-import { layoutContainer, layoutWrapper } from '@/styles/common.css';
+import { layoutContainer, layoutContainerr, layoutWrapper } from '@/styles/common.css';
 
 const BarfSection = () => {
   return (
-    <div className={layoutContainer}>
+    <div className={layoutContainerr}>
       <div className={layoutWrapper}>
     <div className={styles.wrapperContainerOuter}>
           <section className={styles.mainPageBarfraw}>
