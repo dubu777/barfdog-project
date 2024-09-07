@@ -63,8 +63,6 @@ const layoutContainer = style({
 const layoutWrapper = style({
   width: '75rem',
   maxWidth: '120rem',
-  display: "flex",
-  justifyContent: 'center',
   '@media': {
     'screen and (max-width: 75rem)': {
       width: '100%',
@@ -72,7 +70,7 @@ const layoutWrapper = style({
   },
 });
 const mainLayoutWrapper = style({
-  width: '100dvw',
+  width: '100%',
   justifyContent: 'center',
   '@media': {
     'screen and (max-width: 75rem)': {
@@ -80,10 +78,15 @@ const mainLayoutWrapper = style({
     },
   },
 });
+const wrapper = style({
+  padding: '0',
+  position: 'relative',
+});
 
 
 
 export {
+  wrapper,
   mainLayoutWrapper,
   flexColumn,
   flexColumnAllCenter,

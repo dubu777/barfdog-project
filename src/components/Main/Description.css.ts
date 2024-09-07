@@ -3,6 +3,10 @@ import { style } from '@vanilla-extract/css';
 
 export const wrapperContainerOuter = style({
   padding: '0 1.25rem',
+  position: 'relative',
+});
+export const wrapperContainer = style({
+  position: 'relative',
 });
 
 

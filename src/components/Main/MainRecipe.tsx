@@ -63,6 +63,6 @@ export default function MainRecipe() {
           </section>
         </section>
       </div>
-    </div>
+   </div>
   );
 }

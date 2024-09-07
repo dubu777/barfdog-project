@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { getSliderSettings2 } from '@/settings/bannerSlider';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { layoutContainer, mainLayoutWrapper, wrapper } from '@/styles/common.css';
 
 const bannerData = [
   {
@@ -41,6 +42,9 @@ const MainBannerSlider = () => {
 
   const settings = getSliderSettings2();
   return (
+    <div className={layoutContainer}>
+      <div className={mainLayoutWrapper}>
+      <div className={wrapper}>
     <div className="main-banner-slider">
       <Slider {...settings}>
         {bannerData.map((banner) => (
@@ -59,6 +63,9 @@ const MainBannerSlider = () => {
         ))}
       </Slider>
     </div>
+    </div>
+  </div>
+  </div>
   );
 };
 
