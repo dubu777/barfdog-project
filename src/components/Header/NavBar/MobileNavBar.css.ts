@@ -14,7 +14,7 @@ export const navWrapper = style({
   display: "flex",
   justifyContent: 'space-between',
   alignItems: "center",
-  padding: '0 0.625rem',
+  padding: '0 0.025rem',
 });
 
 
@@ -22,9 +22,9 @@ export const menu = style({
   display: "flex",
   alignItems: "center",
   cursor: "pointer",
-  fontSize: themeVars.fontSize.m,
+  fontSize: themeVars.fontSize.s,
   height: "3rem",
-  fontWeight: '700',
+  fontWeight: '500',
   color: themeVars.colors.gray3,
   border: 'none',
   background: 'transparent',

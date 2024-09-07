@@ -3,7 +3,7 @@ import { themeVars } from "@/styles/theme.css";
 
 export const headerContainer = style({
   width: "100dvw",
-  padding: "0 1.25rem",
+  padding: "0 0.25rem",
   boxShadow: "0 .3125rem .9375rem rgba(0, 0, 0, .08)",
   "@media": {
     "screen and (max-width: 900px)": {
