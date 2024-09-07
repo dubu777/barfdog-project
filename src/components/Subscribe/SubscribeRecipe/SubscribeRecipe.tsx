@@ -1,16 +1,13 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, {useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./SubscribeRecipe.css";
 import Image from "next/image";
 import { recipes } from "@/constants/recipes";
-import Prev from "/public/prev.svg";
-import Next from "/public/next.svg";
-import { getSliderSettings } from "@/settings/sliderSettings";
+import { GetSliderSettings } from "@/settings/sliderSettings";
 import { useSlider } from "@/hooks/useSlider";
-import { div } from "framer-motion/client";
 
 interface SubscribeRecipeProps {
   onRecipeSelect: (recipeId: string) => void;
@@ -28,7 +25,7 @@ export default function SubscribeRecipe({
   };
 
 
-  const settings = getSliderSettings(currentSlide, setCurrentSlide);
+  const settings = GetSliderSettings(currentSlide, setCurrentSlide);
 
   return (
     <section className={styles.recipeContainer}>

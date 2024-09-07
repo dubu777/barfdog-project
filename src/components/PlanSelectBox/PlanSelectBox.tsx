@@ -1,6 +1,7 @@
 import React from "react";
 import * as styles from "./PlanSelectBox.css";
 import { calculatePrices } from "@/utils/calculatePrices";
+import Image from "next/image";
 
 interface PlanBoxProps {
   id: string;
@@ -46,10 +47,11 @@ console.log(totalPrice);
           <li>
             <div className={styles.planImgWrapper}>
               <div className={styles.planImgBox}>
-                <img
+                <Image
                   src={imageSrc}
                   alt={`${title} 아이콘`}
                   className={styles.planImage}
+                  layout="fill"
                 />
               </div>
             </div>

@@ -4,13 +4,12 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import {
   layoutContainer,
   mainLayoutWrapper,
 } from "@/styles/common.css";
 import { bannerImage, bannerImageWrapper, customSwiper, wrapperBox } from "./MainBanner.css";
+import Image from "next/image";
 
 const bannerData = [
   {
@@ -55,9 +54,10 @@ const MainBannerSlider = () => {
         {bannerData.map((banner) => (
           <SwiperSlide key={banner.id}>
               <div className={bannerImageWrapper}>
-              <img
+              <Image
                 src={banner.imgSrc}
                 alt={banner.alt}
+                layout="fill"
                 className={bannerImage}
               />
             </div>

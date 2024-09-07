@@ -1,26 +1,21 @@
-// pages/SubscribePage.tsx
 "use client";
 import React from "react";
 import * as styles from "./SubscribeShop.css";
 import { useSurveyForm } from "@/hooks/useSurveyForm";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import SubscribeRecommend from "@/components/Subscribe/SubscribeRecommend/SubscribeRecommend";
 import SubscribeAmount from "@/components/Subscribe/SubscribeAmount/SubscribeAmount";
 import SubscribeRecipe from "@/components/Subscribe/SubscribeRecipe/SubscribeRecipe";
 import Link from "next/link";
 import { useSubscribe } from "@/hooks/useSubscribe";
 
-interface Props {
-  params: { id: string };
-}
 
-export default function SubscribePage({ params }: Props) {
+
+export default function SubscribePage() {
   const { formData } = useSurveyForm();
-  const searchParams = useSearchParams();
   const router = useRouter();
-  const surveyReportsId = searchParams.get("surveyReportsId");
-  const id = '4407';
-  
+
+
   const {
     selectedRecipe,
     selectedPlan,
@@ -44,7 +39,7 @@ export default function SubscribePage({ params }: Props) {
         <button className={styles.prevButton} onClick={handleBack}>
           뒤로가기
         </button>
-        <Link href={`/order/ordersheet/subscribe/${id}`} passHref>
+        <Link href="/order/ordersheet/subscribe">
           <button className={styles.nextButton}>맞춤레시피 구매하기</button>
         </Link>
       </section>

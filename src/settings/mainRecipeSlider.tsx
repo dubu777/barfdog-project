@@ -31,7 +31,7 @@ export const CustomNextArrow = (props: any) => {
 };
 
 // 슬라이더 설정
-export const getSliderSettings3 = (
+export const GetSliderSettings3 = (
   currentSlide: number,
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>
 ) => {

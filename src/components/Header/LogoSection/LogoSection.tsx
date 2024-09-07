@@ -21,7 +21,7 @@ export default function LogoSection() {
             alt="바프독 로고"
             width={280}
             height={48.67}
-            objectFit="contain"
+            style={{ objectFit: 'cover' }}
           />
         )}
       </Link>

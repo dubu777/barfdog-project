@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import * as styles from './Description.css'; // Import vanilla-extract styles
-import { layoutContainer, layoutContainerr, layoutWrapper } from '@/styles/common.css';
+import * as styles from './Description.css';
+import { layoutContainerr, layoutWrapper } from '@/styles/common.css';
 
 const BarfSection = () => {
   return (
@@ -42,7 +42,7 @@ const BarfSection = () => {
           </section>
     </div>
     </div>
-    // </div>
+    </div>
   );
 };
 

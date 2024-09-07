@@ -17,7 +17,6 @@ const PremiumBarfSection = () => {
                   src="/barfPack.webp"
                   width={607}
                   height={591}
-                  // layout="fill"
                 />
               </div>
               <div className={styles.textbox} id="trigger">

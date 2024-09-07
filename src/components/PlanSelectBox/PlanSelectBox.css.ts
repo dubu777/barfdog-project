@@ -82,11 +82,12 @@ export const planImgBox = style({
   width: '100%',
   maxWidth: '5rem',
   aspectRatio: '1/1',
+  position: 'relative',
 });
 
 export const planImage = style({
-  width: '100%',
-  objectFit: 'contain',
+  objectFit: 'cover',
+  objectPosition: 'center',
 });
 export const planTitle = style({
   paddingTop: '.625rem',

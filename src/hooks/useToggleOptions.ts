@@ -39,7 +39,7 @@ export default function useToggleOptions({
         setShowTextField(false);
       }
     }
-  }, [formData, options]);
+  }, [formData, options, fieldName]);
 
   const handleFirstSelection = (value: string | boolean | number) => {
     handleChange(fieldName, value);

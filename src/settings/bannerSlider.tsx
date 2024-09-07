@@ -1,6 +1,6 @@
 
 
-export const getSliderSettings2 = () => {
+export const GetSliderSettings2 = () => {
 
   return {
     dots: false,

@@ -39,10 +39,8 @@ export const wrapperBox = style({
   },
 });
 export const bannerImage = style({
-  width: '100%',
-  height: '100%',
-  position: 'relative',
   objectFit: 'cover',
+  objectPosition: 'center',
 });
 export const bannerImageWrapper = style({
   width: '100%',

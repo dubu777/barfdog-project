@@ -83,7 +83,7 @@ export default function DeliveryInfoPage() {
         <Link href="/" passHref>
           <button className={prevButton}>홈으로</button>
         </Link>
-        <Link href={`/order/ordersheet/subscribe/${id}`} passHref>
+        <Link href="/order/ordersheet/subscribe">
           <button className={nextButton}>주문하러 가기</button>
         </Link>
       </section>

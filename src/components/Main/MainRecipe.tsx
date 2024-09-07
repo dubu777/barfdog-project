@@ -1,24 +1,20 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./MainRecipe.css";
 import Image from "next/image";
 import { recipes } from "@/constants/recipes";
-import Prev from "/public/prev.svg";
-import Next from "/public/next.svg";
-import { getSliderSettings } from "@/settings/sliderSettings";
 import { useSlider } from "@/hooks/useSlider";
-import { div } from "framer-motion/client";
 import { layoutContainer, layoutWrapper } from "@/styles/common.css";
-import { getSliderSettings3 } from "@/settings/mainRecipeSlider";
+import { GetSliderSettings3 } from "@/settings/mainRecipeSlider";
 import Link from "next/link";
 
 export default function MainRecipe() {
   const { currentSlide, setCurrentSlide, sliderRef } = useSlider();
 
-  const settings = getSliderSettings3(currentSlide, setCurrentSlide);
+  const settings = GetSliderSettings3(currentSlide, setCurrentSlide);
 
   return (
     <div className={layoutContainer}>
@@ -26,7 +22,7 @@ export default function MainRecipe() {
         <section className={styles.recipeContainer}>
           <section className={styles.recipeSection}>
             <h2 className={styles.recipeTopTitle}>
-              "진짜 생식"
+            &quot;진짜 생식&quot;
               <br />
               바프독의 8가지 레시피
             </h2>

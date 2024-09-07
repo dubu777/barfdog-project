@@ -21,7 +21,7 @@ export default function useSelection<T>(initialValues: T): UseSelectionReturnTyp
       }
       setIsInitialized(true);
     }
-  }, []);
+  }, [initialValues]);
 
   useEffect(() => {
     if (isInitialized) {
