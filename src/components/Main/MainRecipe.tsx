@@ -51,7 +51,7 @@ export default function MainRecipe() {
             </div>
             <div className={styles.buttonBox}>
               <div className={styles.buttonBox2}>
-                <Link type="button" href={"/"} className={styles.buttonBox3}>
+                <Link type="button" href={"/surveyGuide"} className={styles.buttonBox3}>
                   정기구독 신청하기
                 </Link>
               </div>

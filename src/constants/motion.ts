@@ -58,3 +58,31 @@ export const sectionVariants = {
     },
   },
 };
+
+
+export const textBoxVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // 자식 요소 간의 애니메이션 간격
+    },
+  },
+};
+
+export const listItemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 70, // 아래에서 위로 올라오도록
+  },
+  visible: (custom: any) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: custom * 0.1, // 순차적 딜레이
+      duration: 0.4, // 각 리스트 항목의 애니메이션 지속 시간
+    },
+  }),
+};

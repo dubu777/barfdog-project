@@ -11,6 +11,8 @@ const nextConfig = {
 
     return config;
   },
+  reactStrictMode: true,
+  trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true, // 빌드 시 타입 체크 에러 무시
   },

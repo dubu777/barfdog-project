@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 7000",
     "lint": "next lint",
-    "export": "next export"
+    "build:ssg": "next build && next export"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",

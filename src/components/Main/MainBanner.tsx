@@ -4,12 +4,17 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import 'swiper/css/effect-fade';
+import { layoutContainer, mainLayoutWrapper } from "@/styles/common.css";
 import {
-  layoutContainer,
-  mainLayoutWrapper,
-} from "@/styles/common.css";
-import { bannerImage, bannerImageWrapper, customSwiper, wrapperBox } from "./MainBanner.css";
+  bannerImage,
+  bannerImageWrapper,
+  customSwiper,
+  wrapperBox,
+} from "./MainBanner.css";
 import Image from "next/image";
+import { Autoplay, EffectFade } from "swiper/modules";
 
 const bannerData = [
   {
@@ -39,32 +44,36 @@ const bannerData = [
 ];
 
 const MainBannerSlider = () => {
-
   return (
     <div className={layoutContainer}>
       <div className={mainLayoutWrapper}>
-
-    <div className={wrapperBox}>
-      <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        className={customSwiper}
-      >
-        {bannerData.map((banner) => (
-          <SwiperSlide key={banner.id}>
-              <div className={bannerImageWrapper}>
-              <Image
-                src={banner.imgSrc}
-                alt={banner.alt}
-                layout="fill"
-                className={bannerImage}
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      </div>
+        <div className={wrapperBox}>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            loop={true}
+            pagination={{ clickable: true }}
+            className={customSwiper}
+            autoplay={{ delay: 5000 }}
+            effect="fade"
+            speed={1500}
+            fadeEffect={{ crossFade: true }}
+            modules={[Autoplay, EffectFade]}
+          >
+            {bannerData.map((banner) => (
+              <SwiperSlide key={banner.id}>
+                <div className={bannerImageWrapper}>
+                  <Image
+                    src={banner.imgSrc}
+                    alt={banner.alt}
+                    layout="fill"
+                    className={bannerImage}
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );

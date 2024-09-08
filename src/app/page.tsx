@@ -17,7 +17,7 @@ export default function Home() {
         <BarfSection />
         <Description2/>
         <DifferenceSection/>
-        {/* <PremiumBarfSection/> */}
+        <PremiumBarfSection/>
       </div>
     </div>
   );
