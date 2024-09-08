@@ -37,7 +37,7 @@ export default function MainRecipe() {
                   >
                     <div className={styles.recipeContent}>
                       <figure className={styles.recipeImageWrapper}>
-                        <Image src={recipe.imageUrl} alt={recipe.title2} fill />
+                        <Image src={recipe.imageUrl} alt={recipe.title2} layout="fill" />
                       </figure>
                       <p className={styles.recipeTitle2}>{recipe.title2}</p>
                       <p className={styles.recipeDescription}>

@@ -8,8 +8,8 @@ export default function OrderSheet() {
       <div className={styles.ordersheetFlexTitleBox}>
         <div>상품정보</div>
         <div>수량</div>
-        <div>총 주문금액</div>
-        <div>쿠폰할인</div>
+        <div className={styles.ordersheetNoneBox}>총 주문금액</div>
+        <div >쿠폰할인</div>
         <div>쿠폰적용</div>
       </div>
       <ul>

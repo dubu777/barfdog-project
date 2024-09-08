@@ -23,6 +23,11 @@ export const ordersheetFlexTitleBox = style({
   letterSpacing: '-.01em',
   fontWeight: 500,
   height: '100%',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      display: 'none',
+    },
+  },
 });
 
 
@@ -37,6 +42,30 @@ export const ordersheetFlexBox = style({
   lineHeight: '100%',
   letterSpacing: '-.01em',
   fontWeight: 400,
+  '@media': {
+    'screen and (max-width: 600px)': {
+      position: 'relative',
+      display: 'grid',
+      gridTemplateAreas: `
+        "info_col info_col info_col count_col"
+        "price_col price_col price_col price_col"
+        "coupon_col_red coupon_col_red coupon_col_red apply_coupon_col"
+      `,
+      gridTemplateColumns: '1fr 1fr 1fr 1fr',
+      rowGap: '1.25rem',
+      paddingBottom: '1.875rem',
+      ":before": {
+        content: '""',
+        position: 'absolute',
+        bottom: '1.25rem',
+        left: 0,
+        width: '100%',
+        height: '5.625rem',
+        backgroundColor: '#f1f1f4',
+        zIndex: -99,
+      },
+    },
+  },
 });
 
 export const ordersheetInfoCol = style({
@@ -46,40 +75,107 @@ export const ordersheetInfoCol = style({
   display: 'flex',
   flexDirection: 'column',
   gap: '.625rem',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      position: 'relative',
+      gridColumn: '1 / span 3',
+      ":before": {
+        content: '"쿠폰할인"',
+        position: 'absolute',
+        bottom: '-5.5rem',
+        left: '1.25rem',
+        fontWeight: 400,
+    },
+    },
+  },
 });
 
 export const ordersheetRecipeName = style({
   fontSize: '0.875rem',
   color: themeVars.colors.gray2,
   fontWeight: 400,
+  '@media': {
+    'screen and (max-width: 600px)': {
+      ":after": {
+        content: '"총 주문금액"',
+        position: 'absolute',
+        bottom: '-2.875rem',
+        left: '1.25rem',
+        fontWeight: 400,
+    },
+    },
+  },
 });
 
 export const ordersheetCountCol = style({
   fontSize: '1rem',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      gridColumn: '4 / span 1',
+  textAlign: 'right',
+  paddingRight: '.625rem',
+    },
+  },
 });
 
 export const ordersheetTitleCol = style({
   fontSize: '1rem',
   fontWeight: '600',
 });
+export const ordersheetNoneBox = style({
+  '@media': {
+    'screen and (max-width: 600px)': {
+      display: 'none',
+    },
+  },
+});
 
 export const ordersheetPriceCol = style({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+
+  '@media': {
+    'screen and (max-width: 600px)': {
+      gridColumn: '1 / span 4',
+      textAlign: 'right',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      paddingTop: '.625rem',
+      paddingRight: '1.25rem',
+    },
+  },
 });
 
 export const ordersheetPriceInner = style({
   color: themeVars.colors.gray2,
-  textDecoration: 'line-through'
+  textDecoration: 'line-through',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      paddingRight: '0.625rem',
+    },
+  },
+
 });
 
 export const ordersheetCouponColRed = style({
   color: '#999',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      gridColumn: '1 / span 3',
+      textAlign: 'right',
+    },
+  },
 });
 
 export const ordersheetApplyCouponCol = style({
-  textAlign: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      gridColumn: '4 / span 1',
+  justifyContent: 'flex-end',
+  paddingLeft: '.625rem',
+  paddingRight: '1.25rem',
+    },
+  },
 });
 
 export const ordersheetButton = style({
@@ -97,4 +193,10 @@ export const ordersheetButton = style({
   fontSize: '.9375rem',
   fontWeight: 500,
   backgroundColor: '#fff',
+  '@media': {
+    'screen and (max-width: 600px)': {
+      gridColumn: '1 / span 3',
+      textAlign: 'right',
+    },
+  },
 });
