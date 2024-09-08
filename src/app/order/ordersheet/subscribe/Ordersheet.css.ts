@@ -9,6 +9,7 @@ export const outerContainer = style({
 export const innerContainer = style({
   width: '47.5rem',
   maxWidth: '47.5rem',
+  padding: "0 1.25rem",
   "@media": {
     "screen and (max-width: 600px)": {
       padding: "0 1.25rem",

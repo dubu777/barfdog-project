@@ -2,6 +2,11 @@ import { style } from '@vanilla-extract/css';
 
 export const ordererInfoSection = style({
   marginBottom: '0 0 3.125rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      marginBottom: '0 0 1.25rem',
+    },
+  },
 });
 
 export const ordererInfoTitle = style({

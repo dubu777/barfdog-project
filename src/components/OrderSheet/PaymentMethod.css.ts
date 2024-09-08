@@ -16,6 +16,18 @@ export const paymentMethodGrid = style({
   gridTemplateColumns: 'repeat(auto-fill, minmax(15rem, 15rem))',
   columnGap: '.625rem',
   rowGap: '.5rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      display: 'grid',
+      justifyContent: 'flex-start',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+    },
+      '(max-width: 400px)': {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
+  }
 });
 
 export const paymentMethodItem = style({
@@ -31,6 +43,11 @@ export const paymentMethodItem = style({
   lineHeight: '100%',
   letterSpacing: '-.01em',
   cursor: 'pointer',
+  "@media": {
+      '(max-width: 400px)': {
+        width: '100%',
+      },
+  }
 });
 
 export const paymentMethodImage = style({

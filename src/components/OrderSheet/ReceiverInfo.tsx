@@ -42,7 +42,7 @@ const ReceiverInfo = () => {
         </label>
       </div>
       <div className={styles.gridBox}>
-        <p>받는 분</p>
+        <p className={styles.gridBoxText}>받는 분</p>
         <div>
           <input
             type="text"
@@ -54,7 +54,7 @@ const ReceiverInfo = () => {
           />
         </div>
 
-        <p>연락처</p>
+        <p className={styles.gridBoxText}>연락처</p>
         <div>
           <input
             type="text"
@@ -66,7 +66,7 @@ const ReceiverInfo = () => {
           />
         </div>
 
-        <p>주소</p>
+        <p className={styles.gridBoxText}>주소</p>
         <ul className={styles.addressBox}>
           <li className={styles.addressItem}>
             <input
@@ -101,7 +101,7 @@ const ReceiverInfo = () => {
           </li>
         </ul>
 
-        <p>배송 요청사항</p>
+        <p className={styles.gridBoxText}>배송 요청사항</p>
         <div>
           <input
             type="text"

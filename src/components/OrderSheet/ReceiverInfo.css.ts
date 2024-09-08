@@ -3,6 +3,11 @@ import { style } from '@vanilla-extract/css';
 
 export const receiverInfoSection = style({
   padding: '1.25rem 0 2.5625rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      padding: '1.25rem 0',
+    },
+  },
 });
 
 export const receiverInfoTitle = style({
@@ -30,6 +35,21 @@ export const checkboxLabel = style({
 export const checkboxInput = style({
   display: 'none',
 });
+export const gridBoxText = style({
+  textAlign: 'left',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      marginTop: '0.625rem',
+    },
+  }
+});
+export const gridBoxWrap = style({
+  "@media": {
+    "screen and (max-width: 600px)": {
+      marginBottom: '0.625rem',
+    },
+  }
+});
 
 export const gridBox = style({
   width: '100%',
@@ -43,6 +63,14 @@ export const gridBox = style({
   fontSize: '.9375rem',
   lineHeight: '100%',
   letterSpacing: '-.01em',
+  "@media": {
+    "screen and (max-width: 600px)": {
+        maxWidth: '100%',
+  gridTemplateColumns: '1fr',
+  gridTemplateRows: 'none',
+  rowGap: '.3125rem',
+    },
+  }
 });
 
 export const inputBox = style({

@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css';
 
 export const reservesSection = style({
   padding: '2.375rem 0 3.125rem',
+  
 });
 
 export const reservesTitle = style({
@@ -24,6 +25,11 @@ export const flexBox = style({
   lineHeight: '100%',
   letterSpacing: '-.01em',
   height: '7.5rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      gridTemplateColumns: '5rem 1fr',
+    },
+  }
 });
 
 export const inputBox = style({
@@ -31,6 +37,12 @@ export const inputBox = style({
   alignItems: 'flex-start',
   justifyContent: 'flex-start',
   gap: '.625rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      display: 'grid',
+      gridTemplateColumns: '1fr 6.5625rem',
+    },
+  }
 });
 
 export const inputWrap = style({
@@ -77,6 +89,13 @@ export const pointBox = style({
   fontSize: '.875rem',
   fontWeight: 600,
   minWidth: '8.4375rem',
+  "@media": {
+    "screen and (max-width: 600px)": {
+      display: 'grid',
+      gridColumn: '1 / span 2',
+      width: '100%',
+    },
+  }
 });
 
 export const pointText = style({
