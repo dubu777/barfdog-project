@@ -25,7 +25,7 @@ export default function SurveyNavigationButtons({
   const router = useRouter();
 
   const handleSubmit = () => {
-  router.push(`/survey/statistics/${4376}`)
+  router.push(`/survey/statistics`)
   }
 
   return (

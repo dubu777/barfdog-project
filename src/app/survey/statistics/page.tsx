@@ -38,7 +38,7 @@ export default function StatisticPage({ params }: Props) {
       <section className={styles.confirmButtonWrapper}>
         <Link
           className={styles.confirmButton}
-          href={`/order/subscribeShop?surveyReportsId=${id}`}
+          href={'/order/subscribeShop'}
         >
           맞춤 플랜 확인하기
         </Link>
