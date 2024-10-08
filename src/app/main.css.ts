@@ -23,6 +23,5 @@ export const ordererInfoGridBox = style({
 export const ordererInfoValue = style({
   height: '100%',
   textAlign: 'left',
-  color: 'red',
-  margin: '0',
+  color: 'black',
 });
