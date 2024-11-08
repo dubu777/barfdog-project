@@ -43,6 +43,7 @@ export default function SurveyForm() {
     prevSection();
     scrollToElement("survey-top");
   };
+console.log(formData, 'formData');
 
   return (
     <div className={surveyContainer} id="survey-top">
